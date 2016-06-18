@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">꿈속 잉어</string>
+    <string name="but_start"> 시 작 </string>
+    <string name="text_time">잠자는 시간  </string>
+    <string name="text_name"> 이 름 </string>
+    <string name="text_title"> 꿈속 잉어 </string>
+</resources>
