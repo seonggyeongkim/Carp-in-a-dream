@@ -42,9 +42,19 @@
         android:id="@+id/time_pick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:timePickerMode="spinner"></TimePicker>
-
+        android:timePickerMode="spinner"
+        ></TimePicker>
 
 </LinearLayout>
+
+    <Button
+        android:id="@+id/but_start"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="130dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="잉어야! 들려줭~!"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
 
 </LinearLayout>

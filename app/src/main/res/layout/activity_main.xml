@@ -26,7 +26,7 @@
             android:gravity="center"
             android:paddingLeft="75dp"
             android:paddingTop="100dp"
-            android:paddingBottom="200dp"
+            android:paddingBottom="150dp"
             android:shadowColor="#3aece0"
             android:shadowDy="1.0"
             android:shadowDx="1.0"
@@ -34,13 +34,26 @@
             android:textStyle="bold"
             />
 
-        <Button
-            android:id="@+id/but_start"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/but_start"
-            android:layout_marginLeft="120dp"
-            />
+            android:textSize="25dp"
+            android:textStyle="italic"
+            android:text="@string/text_con1"
+            android:textColor="#ffffff"
+            android:paddingBottom="25dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:textColor="#ffffff"
+            android:text="@string/text_con2"
+            android:paddingLeft="15dp"/>
+
+
     </LinearLayout>
 
 </LinearLayout>
