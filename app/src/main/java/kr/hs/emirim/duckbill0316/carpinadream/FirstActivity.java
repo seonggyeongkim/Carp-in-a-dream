@@ -23,7 +23,7 @@ public class FirstActivity extends ActionBarActivity {
             public void run() { //(객체의 잠조 값 , ms단위의 시간 값)
                 Intent intent=new Intent(getApplicationContext(),MainActivity.class); //액티비티 시작시 필요한 객체 (인턴트 객체)
                 startActivity(intent);
-                //overridePendingTransition(0,R.anim.zoom_exit); <-화면 전환
+                overridePendingTransition(0,R.anim.zoom_exit); //<-화면 전환
                 finish(); //현재 액티비트를 닫아줌
             }
         },3000); //1초에 1000 (ms 단위)

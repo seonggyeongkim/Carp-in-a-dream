@@ -24,7 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton.setOnClickListener(this);
     }
 
-    //화면 전환 효과 onResume()
+    //화면 전환 효과!
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mName.setText(null);//(" "); 빈칸을 넣어두는 것이 좋음
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
 
     @Override
     public void onClick(View v) {
