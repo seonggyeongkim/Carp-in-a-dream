@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText mName;
     Button mButton;
+    TimePicker tPicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mName = (EditText) findViewById(R.id.name);
         mButton=(Button) findViewById(R.id.but_start);
+        tPicker=(TimePicker)findViewById(R.id.time_pick);
         mButton.setOnClickListener(this);
     }
 
@@ -38,10 +41,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         try{
             Toast.makeText(this," '이름'과 '잠자는 시간'을 입력해주세요! ", Toast.LENGTH_LONG).show();
-            Intent intent=new Intent(this,MainActivity.class);
+            Intent intent=new Intent(this,ThirdActivity.class);
             intent.putExtra("name",name);
+            intent.putExtra("t_h",Integer.toString(tPicker.getCurrentHour()));
+            intent.putExtra("t_m",Integer.toString(tPicker.getCurrentMinute()));
             //화면 전환 효과
-
+            startActivity(intent);
 
         }catch (NullPointerException e) { //예외 처리
             Toast.makeText(this, "이름을 입력해 주세요!", Toast.LENGTH_LONG).show();
