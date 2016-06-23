@@ -106,7 +106,7 @@ public class ThirdActivity extends ActionBarActivity{
         Log.d(TAG,"인텐트값 읽기 <name> : "+name);
 
 
-        mResult.setText(name + "님, 안녕하세요!"+"\n"+"오늘 밤, "+t_h+"시 "+t_m+"분에 "+"잉어가 들려주는 이야기 입니다."); //출력
+        mResult.setText(name + "님, 안녕하세요!"+"\n"+"오늘 밤, "+t_h+"시 "+t_m+"분에 "+"'잉어가 들려주는 이야기' 입니다!"); //출력
 
     }
     }

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton=(Button) findViewById(R.id.but_start);
         tPicker=(TimePicker)findViewById(R.id.time_pick);
         mButton.setOnClickListener(this);
+        Toast.makeText(this, " '이름'과 '잠자는 시간'을 입력해주세요! ", Toast.LENGTH_LONG).show();
     }
 
     //화면 전환 효과!
@@ -40,13 +41,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String name = mName.getText().toString();
 
         try{
-            Toast.makeText(this," '이름'과 '잠자는 시간'을 입력해주세요! ", Toast.LENGTH_LONG).show();
-            Intent intent=new Intent(this,ThirdActivity.class);
-            intent.putExtra("name",name);
-            intent.putExtra("t_h",Integer.toString(tPicker.getCurrentHour()));
-            intent.putExtra("t_m",Integer.toString(tPicker.getCurrentMinute()));
-            //화면 전환 효과
-            startActivity(intent);
+                Toast.makeText(this, name+"님, 꿈속에서 만나요!!^^", Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(this, ThirdActivity.class);
+                    intent.putExtra("name", name);
+                    intent.putExtra("t_h", Integer.toString(tPicker.getCurrentHour()));
+                    intent.putExtra("t_m", Integer.toString(tPicker.getCurrentMinute()));
+                    //화면 전환 효과
+                    startActivity(intent);
 
         }catch (NullPointerException e) { //예외 처리
             Toast.makeText(this, "이름을 입력해 주세요!", Toast.LENGTH_LONG).show();
